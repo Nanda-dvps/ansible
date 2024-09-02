@@ -3,4 +3,12 @@
   tasks: 
   - name: PLAY-1 TASK-1
     ansible.builtin.debug:
-      msg: "This is from multi play"
+      msg: "This is from multi play 1 and task 1"
+
+
+- name: PLAY-2
+  hosts: web
+  tasks: 
+  - name: PLAY-2 TASK-1
+    ansible.builtin.debug:
+      msg: "This is from multi play 2 and task 1"
