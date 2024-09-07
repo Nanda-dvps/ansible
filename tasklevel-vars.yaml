@@ -1,0 +1,20 @@
+- name: variables to print 
+  hosts: web
+  vars: # play level variables, all tasks in this play have access to this
+   NAME: "Nanda"
+   AGE: 29
+   LIVING: "London"
+  tasks:
+  - name: print the information
+    ansible.builtin.debug:
+      msg: "Hi name is : {{NAME}}, Age is: {{AGE}}, living in: {{LIVING}}"
+
+  - name: print the information again
+    vars: # task level variables
+      NAME: "Raj"
+    ansible.builtin.debug:
+      msg: "Hi name is : {{NAME}}, Age is: {{AGE}}, living in: {{LIVING}}"
+
+  - name: print the information again and again
+    ansible.builtin.debug:
+      msg: "Hi name is : {{NAME}}, Age is: {{AGE}}, living in: {{LIVING}}"
