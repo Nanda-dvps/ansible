@@ -10,7 +10,7 @@
       msg: "Hi name is : {{NAME}}, Age is: {{AGE}}, living in: {{LIVING}}"
 
   - name: print the information again
-    vars: # task level variables
+    vars: # task level variables override the play level variables
       NAME: "Raj"
     ansible.builtin.debug:
       msg: "Hi name is : {{NAME}}, Age is: {{AGE}}, living in: {{LIVING}}"
