@@ -3,10 +3,13 @@
   vars_prompt:
   - name: NAME
     prompt: Please enter the name
+    private: false #not confidential
   - name: AGE
     prompt: Please enter the age
+    private: true # confidential
   - name: LIVING
     prompt: Please enter the location where you living
+    private: false #not confidential
   tasks:
   - name: print the information
     ansible.builtin.debug:
